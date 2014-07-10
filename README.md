@@ -1,7 +1,7 @@
-node-red-contrib-mqttssl
+node-red-contrib-async
 ========================
 
-A node-red node for MQTT over SSL/TLS. Based on the core node for MQTT (https://github.com/node-red/node-red).
+A node-red node for executing javascript code in a node-red flow either synchronously, asynchronously, or both. Based on the node-red core function node. 
 
 
 Install
@@ -9,13 +9,13 @@ Install
 
 Run the following command in the root directory of your Node-RED install
 
-    npm install node-red-contrib-mqttssl
+    npm install node-red-contrib-async
 
 
 Usage
 -----
 
 In the node-red package.json add a dependency to
-"node-red-contrib-mqttssl":"latest"
+"node-red-contrib-async":"latest"
 
 Usage is documented in the node's information panel.
