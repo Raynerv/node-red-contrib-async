@@ -1,0 +1,25 @@
+{
+    "name"         : "node-red-contrib-async",
+    "version"      : "0.0.1",
+    "description"  : "Based on node-red-node-function. A function block that allows you to output messages to other nodes asynchronously.",
+    "dependencies": {		
+    },
+	"license": "Apache",
+	"repository" : {
+        "type":"git",
+        "url":"https://github.com/Raynerv/node-red-contrib-async.git"
+    },
+    "keywords": [ "node-red", "asynchronous", "function", "callback"],
+    "node-red"     : {
+        "nodes": {
+            "async": "async.js"
+        }
+    },
+	"directories" : {		
+		"icons": "icons"
+		},
+	 "author": {
+        "name": "Rayner Vintervoll",
+        "email": "raynerv@gmail.com"
+    }
+}
