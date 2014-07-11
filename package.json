@@ -2,7 +2,8 @@
     "name"         : "node-red-contrib-async",
     "version"      : "0.0.1",
     "description"  : "Based on node-red-node-function. A function block that allows you to output messages to other nodes asynchronously.",
-    "dependencies": {		
+    "dependencies": {	
+		"underscore" : "1.6.0"
     },
 	"license": "Apache",
 	"repository" : {
