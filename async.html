@@ -39,7 +39,9 @@
 	<p>What makes this node different from the regular core function node is that you may
 	continue flows both synchronously and asynchronously. This means that this node can output
 	messages both via the return statement (synchronously) and by calling a predefined callback (asynchronously) <code>cb(msg)</code>.</p>
-	<p>This node type also has the <a target="_new" href="http://underscore.js.org">underscore</a> library accessible in functions by using _.
+	<p>This node type also has the <a target="_new" href="http://underscore.js.org">underscore</a> library accessible in
+        functions by using _, and the <a target="new" href="https://github.com/caolan/async">Async.js</a> library accessible
+    using async.</p>
 	
 	<p>The function must <strong>either</strong> return the messages it wants to pass on to the next nodes
 	in the flow, call the callback with the messages, or both. </p>
@@ -51,6 +53,25 @@
 msg.payload = "Hello";
 return msg;
 	</pre>
+    <p> Example of using the Async.js library to parallelize 2 asynchronous operations that merge into a function that
+    continues node-red flow:</p>
+    <pre>async.parallel({
+  one: function(join){
+    _.delay(function(){
+	  join(null, "Hello ");
+	}, 2000);
+  },
+  two: function(join){
+    _.delay(function(){
+	  join(null, "World");
+	}, 2000);
+  }
+}, function(err, results) {
+  // results is now equals to: {one: "Hello", two: "World"}
+  msg.payload = results.one + results.two;
+  cb(msg);
+});
+    </pre>
 	<p>Both the callback <code>cb(msg)</code> and the regular return statement 
 	<code>return msg</code> may have msg objects consisting of:</p>
 	<ul>
