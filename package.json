@@ -3,7 +3,7 @@
     "version"      : "0.0.4",
     "description"  : "Based on node-red-node-function. A function block that allows you to output messages to other nodes asynchronously.",
     "dependencies": {	
-		"underscore" : "1.9.1",
+		"underscore" : "1.13.8",
         "async" : "2.6.1"
     },
 	"license": "Apache",
